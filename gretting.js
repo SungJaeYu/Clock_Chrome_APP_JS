@@ -5,12 +5,24 @@ const USER_LS = "currentUser", SHOWING_CN = "showing";
 
 function paintGreeting(text){
     form.classList.remove(SHOWING_CN);
-    greeting.classList.add();
+    greeting.classList.add(SHOWING_CN);
     greeting.innerText = `Hello ${text}`;
+}
+
+function handelSubmit(event){
+    event.preventDefault();
+    const currentValue = input.value;
+    paintGreeting(currentValue);
+    saveName(currentValue);
+}
+
+function saveName(text){
+    localStorage.setItem(USER_LS, text);
 }
 
 function askForName(){
     form.classList.add(SHOWING_CN);
+    form.addEventListener("submit", handelSubmit);
 }
 
 function loadName(){
@@ -23,7 +35,7 @@ function loadName(){
 }
 
 function init(){
-
+    loadName();
 }
 
 init();
