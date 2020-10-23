@@ -27,8 +27,9 @@ function askForName(){
 
 function loadName(){
     const currentUser = localStorage.getItem(USER_LS);
-    if(currentUser == null){
+    if(currentUser === null){
         askForName();
+        console.log("oh");
     } else {
         paintGreeting(currentUser);
     }
