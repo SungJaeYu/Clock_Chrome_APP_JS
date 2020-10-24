@@ -33,14 +33,16 @@ function loadToDos(){
 
 function paintToDo(text){
     const li = document.createElement("li");
-    const delBtn = document.createElement("button");
-    delBtn.innerText = "X";
-    delBtn.addEventListener("click",deleteToDo);
+    // const delBtn = document.createElement("button");
+    const ico = document.createElement("img");
+    ico.src = `img/X.png`;
+    ico.classList.add("iconImage");
+    ico.addEventListener("click",deleteToDo);
     const span = document.createElement("span");
     const newId = Date.now();
 	span.innerText = text;
     li.appendChild(span);
-    li.appendChild(delBtn);
+    li.appendChild(ico);
 	li.id = newId;
     toDoList.appendChild(li);
 	const toDoObj = {

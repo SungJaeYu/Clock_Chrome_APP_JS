@@ -1,12 +1,51 @@
 .btn {
-    cursor: pointer;
+  cursor: pointer;
 }
 body {
-    color :#34495e;
+  color :#34495e;
 }
 .clicked {
-    color: #7f8c8d;
+  color: #7f8c8d;
 }
+
+.clock_header{
+  font-size : 200px;
+  height: 200px;
+  width : 800px;
+  margin : 50px;
+}
+.iconImage {
+  width : 30px;
+  height : 30px;
+  color : white;
+  margin-left : 10px;
+  padding-bottom : 5px;
+}
+.center {
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+  text-align : center;
+  font-size : 50px;
+  color : white;
+  position : absolute;
+  top : 50%;
+  left : 50%;
+  margin : -400px 0px 0px -490px;
+}
+
+input{
+  background-color: white;
+  border : none;
+  width : 200px;
+  height : 50px;
+  border-radius : 5px;
+  text-align : center;
+  font-size : 30px;
+  font-weight: bold;
+}
+
+
 .form,
 .greetings {
   display: none;
